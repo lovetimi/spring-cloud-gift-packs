@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: error:zipkin-autoconfigure-ui:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/error/zipkin-autoconfigure-ui/unknown/zipkin-autoconfigure-ui-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/error/zipkin-autoconfigure-ui/unknown/zipkin-autoconfigure-ui-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/error/zipkin-autoconfigure-ui/unknown/zipkin-autoconfigure-ui-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

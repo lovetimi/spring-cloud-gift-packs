@@ -1,0 +1,40 @@
+server:
+  port: 9022
+spring:
+  application:
+    name: gatway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      filter:
+        remove-non-proxy-headers:
+          headers:
+            - dummy
+      routes:
+
+        - id:  apiuser
+          # 重点！/info必须使用http进行转发，lb代表从注册中心获取服务
+          uri: lb://user-service
+          predicates:
+            # 重点！转发该路径！,/userapi/**,
+            - Path=/user/**
+          filters:
+            - StripPrefix=0
+
+        - id:  orderApi
+          uri: lb://order-service
+          predicates:
+            - Path=/order/**
+          filters:
+            - StripPrefix=0
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://admin:admin@localhost:9000/eureka/
+

@@ -15,7 +15,6 @@ public class EurekeServerApplication {
         SpringApplication.run(EurekeServerApplication.class, args);
     }
 
-
     @EnableWebSecurity
     static class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         @Override

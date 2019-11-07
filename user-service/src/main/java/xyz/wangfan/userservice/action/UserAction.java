@@ -29,7 +29,9 @@ public class UserAction {
 
     @RequestMapping(value = "/sayHi", method = RequestMethod.GET)
     public String sayHi() {
-        return orderServcie.sayHi();
+//        return orderServcie.sayHi();
+            return "the default websiteis： www.baidu.com";
+
     }
 
 }
