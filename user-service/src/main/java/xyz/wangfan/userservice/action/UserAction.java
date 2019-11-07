@@ -30,6 +30,7 @@ public class UserAction {
     @RequestMapping(value = "/sayHi", method = RequestMethod.GET)
     public String sayHi() {
         return orderServcie.sayHi();
+
     }
 
 }
