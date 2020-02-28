@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.wangfan.userservice.service.OrderServcie;
+import xyz.wangfan.userservice.service.UserService;
 import xyz.wangfan.userservice.service.impl.OrderServiceImpl;
 
 /**
@@ -22,9 +23,12 @@ public class UserAction {
     @Autowired
     private OrderServcie orderServcie;
 
+    @Autowired
+    private UserService userService;
+
     @RequestMapping(value = "/get-name/{code}", method = RequestMethod.GET)
     public String getUserNameByCode(@PathVariable("code") String code) {
-        return "张三";
+        return userService.name(code);
     }
 
     @RequestMapping(value = "/sayHi", method = RequestMethod.GET)
